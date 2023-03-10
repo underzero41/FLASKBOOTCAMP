@@ -15,14 +15,17 @@
 
 <body>
 
-<table>
-    {% for row in data %}
-        <tr><th>Name</th>><th>Surname</th><th>BirthDate</th></tr>
+{% if date %}
+    <table>
+        {% for row in data %}
+            <tr><th>Name</th>><th>Surname</th><th>BirthDate</th></tr>
 
-        <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }}</td></tr>
-    {% endfor %}
-</table>
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }}</td></tr>
+        {% endfor %}
+    </table>
+{% end if %}
+
 <h3><a href="/about">about</a></h3>
-    {% endblock %}
+{% endblock %}
 </body>
 </html>

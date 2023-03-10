@@ -1,0 +1,27 @@
+{% extends  'base1.html' %}
+
+
+{% block content %}
+
+{% if form %}
+<form action="" method="post">
+    {{ form.csrf_token }}
+
+   
+    <br>
+    {{ form.email.label }}
+    {{ form.email() }}
+    <br>
+    {{ form.password.label }}
+    {{ form.password() }}
+    <br>
+    {{ form.submit() }}
+{% endif %}
+
+
+{{ message }}
+   
+
+</form>
+
+{% endblock %}
